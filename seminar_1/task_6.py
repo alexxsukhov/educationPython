@@ -5,20 +5,25 @@
 # Сделал через строку, объясняю почему, билет может быть с номером 023005, что числом не является, а набором цифр
 
 num_ticket = input("Введите номер билета для проверки: ")
-summ_left = 0
-summ_right = 0
 length = len(num_ticket)
-half_len = length // 2
 
-i = 0
-for item in num_ticket:
-    if i < half_len:
-        summ_left = summ_left + int(item)
-    if half_len <= i <= length - 1:
-        summ_right = summ_right + int(item)
-    i = i + 1
+if length == 6:
+    summ_left = 0
+    summ_right = 0
 
-if summ_right == summ_left:
-    print("Билет счастливый")
+    half_len = length // 2
+
+    i = 0
+    for item in num_ticket:
+        if i < half_len:
+            summ_left = summ_left + int(item)
+        if half_len <= i <= length - 1:
+            summ_right = summ_right + int(item)
+        i = i + 1
+
+    if summ_right == summ_left:
+        print("Билет счастливый")
+    else:
+        print("Билет несчастливый")
 else:
-    print("Билет несчастливый")
+    print("Введите корректный номер")
