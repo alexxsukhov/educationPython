@@ -6,7 +6,7 @@ m = int(input("Введите размер m: "))
 
 k = int(input("Введите количество долек: "))
 
-if (k < n * m and k % n == 0) or (k < n * m and k % m == 0):
+if k < n * m and k % n == 0 or k < n * m and k % m == 0:
     print("Можно разломить")
 else:
     print("Нельзя разломить")
