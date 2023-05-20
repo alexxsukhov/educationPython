@@ -31,8 +31,7 @@ summary_values = 0
 
 for el in usr_string:
     for key, value in dictionary.items():
-        for i in value.lower():
-            if el == i:
-                summary_values = summary_values + key
+        if el in value.lower():
+            summary_values = summary_values + key
 
 print(summary_values)
