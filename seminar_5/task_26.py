@@ -6,8 +6,7 @@
 def usr_exp(a, b):
     if b == 1:
         return a
-    else:
-        return a * usr_exp(a, b - 1)
+    return a * usr_exp(a, b - 1)
 
 
 usr_number = int(input("Введите число: "))
