@@ -10,7 +10,7 @@ max_range = int(input("Введите максимальный порог иск
 
 array = [randint(min_value, max_value) for i in range(length_array)]
 
-array_index = [i for i in range(len(array)) if min_range < array[i] < max_range]
+array_index = [i for i in range(len(array)) if min_range <= array[i] <= max_range]
 
 print()
 print(array)
