@@ -10,10 +10,6 @@
 """
 
 
-
-
-
-
 def is_rhythm(user_string):
     vowels_symbols = "аеёиоуыэюя"
     list_words = user_string.split()
@@ -24,6 +20,7 @@ def is_rhythm(user_string):
             return False
 
     return True
+
 
 usr_string = "пара-ра-рам рам-пам-папам па-ра-па-дам"
 
