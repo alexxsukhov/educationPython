@@ -17,9 +17,9 @@ def is_rhythm(user_string):
     ideal_count_vowels = count_vowels(list_words[0])
     for word in list_words:
         if count_vowels(word) != ideal_count_vowels:
-            return False
+            return "Парам пам-пам"
 
-    return True
+    return "Пам парам"
 
 
 usr_string = "пара-ра-рам рам-пам-папам па-ра-па-дам"
