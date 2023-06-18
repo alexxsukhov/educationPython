@@ -14,5 +14,12 @@ if SIDE_A < SIDE_B + SIDE_C and \
         SIDE_C < SIDE_B + SIDE_A and \
         SIDE_C < SIDE_A + SIDE_B:
     print("Треугольник может существовать.")
+    if SIDE_A == SIDE_B == SIDE_C:
+        print("Треугольник равносторонний")
+    elif SIDE_A == SIDE_B or SIDE_A == SIDE_C or SIDE_B == SIDE_C:
+        print("Треугольник равнобедренный")
+    else:
+        print("Треугольник разносторонний")
+
 else:
     print("Треугольник не может существовать.")

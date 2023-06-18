@@ -11,22 +11,24 @@ from random import randint
 LOWER_LIMIT = 0
 UPPER_LIMIT = 1000
 number = randint(LOWER_LIMIT, UPPER_LIMIT)
-COUNT_ATTEMPS = 10
+print(number)
+usr_number = (LOWER_LIMIT + UPPER_LIMIT) // 2
 
-iterator = 1
+i = 1
 
-while iterator <= COUNT_ATTEMPS:
-    print(f"Попытка {iterator}")
-    usr_number = int(input("Введите число: "))
-    iterator += 1
+while True:
+    print(f"Попытка {i}")
+    i += 1
     if usr_number > number:
         print("Число меньше")
+        UPPER_LIMIT = usr_number
 
     elif usr_number < number:
         print("Число больше")
+        LOWER_LIMIT = usr_number
     else:
-        print(f"Вы угдали, загаданное число - {usr_number}")
+        print(usr_number)
+        print()
         break
+    usr_number = (LOWER_LIMIT + UPPER_LIMIT) // 2
 
-else:
-    print(f"Попытки закончились. Загаданное число {number}")
