@@ -1,4 +1,4 @@
-from functions import *
+from intro_python.seminar_8.task_38.functions import *
 from os.path import exists
 
 
