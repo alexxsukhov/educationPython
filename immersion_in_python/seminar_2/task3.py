@@ -4,6 +4,7 @@
 """
 from fractions import Fraction
 
+
 def SummaryFractions(first, second) -> str:
     first_fraction_list = first.split("/")
     second_fraction_list = second.split("/")
