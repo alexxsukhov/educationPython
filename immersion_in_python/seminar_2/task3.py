@@ -61,8 +61,8 @@ usr_first_fraction = input("Введите первую дробь: ")
 usr_second_fraction = input("Введите вторую дробь: ")
 
 print("Вывод с помощью модуля")
-print(Fraction(usr_first_fraction) + Fraction(usr_first_fraction))
-print(Fraction(usr_second_fraction) * Fraction(usr_second_fraction))
+print(Fraction(usr_first_fraction) + Fraction(usr_second_fraction))
+print(Fraction(usr_first_fraction) * Fraction(usr_second_fraction))
 
 print()
 
