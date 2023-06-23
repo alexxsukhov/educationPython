@@ -5,9 +5,9 @@
 from fractions import Fraction
 
 
-def SummaryFractions(first, second) -> str:
-    first_fraction_list = first.split("/")
-    second_fraction_list = second.split("/")
+def SummaryFractions(first_fraction, second_fraction) -> str:
+    first_fraction_list = first_fraction.split("/")
+    second_fraction_list = second_fraction.split("/")
 
     first_number_numerator = int(first_fraction_list[0])
     first_number_denominator = int(first_fraction_list[1])
@@ -32,9 +32,9 @@ def SummaryFractions(first, second) -> str:
     return f"{common_numerator}/{common_denominator}"
 
 
-def MultiplyFractions(first, second) -> str:
-    first_fraction_list = first.split("/")
-    second_fraction_list = second.split("/")
+def MultiplyFractions(first_fraction, second_fraction) -> str:
+    first_fraction_list = first_fraction.split("/")
+    second_fraction_list = second_fraction.split("/")
 
     first_number_numerator = int(first_fraction_list[0])
     first_number_denominator = int(first_fraction_list[1])
@@ -57,15 +57,15 @@ def MultiplyFractions(first, second) -> str:
     return f"{common_numerator}/{common_denominator}"
 
 
-first_fraction = input("Введите первую дробь: ")
-second_fraction = input("Введите вторую дробь: ")
+usr_first_fraction = input("Введите первую дробь: ")
+usr_second_fraction = input("Введите вторую дробь: ")
 
 print("Вывод с помощью модуля")
-print(Fraction(first_fraction) + Fraction(second_fraction))
-print(Fraction(first_fraction) * Fraction(second_fraction))
+print(Fraction(usr_first_fraction) + Fraction(usr_first_fraction))
+print(Fraction(usr_second_fraction) * Fraction(usr_second_fraction))
 
 print()
 
 print("Вывод с помощью пользовательских функций")
-print(SummaryFractions(first_fraction, second_fraction))
-print(MultiplyFractions(first_fraction, second_fraction))
+print(SummaryFractions(usr_first_fraction, usr_second_fraction))
+print(MultiplyFractions(usr_first_fraction, usr_second_fraction))
