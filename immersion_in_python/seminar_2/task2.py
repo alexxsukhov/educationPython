@@ -17,10 +17,8 @@ END_CYCLE = 0
 
 MAX_RANGE_HEX = 10
 
-# number = int(input("Введите число для конвертации: "))
-number = 1
+number = int(input("Введите число для конвертации: "))
 res = ""
-
 print(hex(number))
 
 while number != END_CYCLE:
