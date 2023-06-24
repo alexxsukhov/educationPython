@@ -5,7 +5,7 @@
 from fractions import Fraction
 
 
-def SummaryFractions(first_fraction, second_fraction) -> str:
+def summary_fractions(first_fraction, second_fraction) -> str:
     first_fraction_list = first_fraction.split("/")
     second_fraction_list = second_fraction.split("/")
 
@@ -32,7 +32,7 @@ def SummaryFractions(first_fraction, second_fraction) -> str:
     return f"{common_numerator}/{common_denominator}"
 
 
-def MultiplyFractions(first_fraction, second_fraction) -> str:
+def multyply_fractions(first_fraction, second_fraction) -> str:
     first_fraction_list = first_fraction.split("/")
     second_fraction_list = second_fraction.split("/")
 
@@ -67,5 +67,5 @@ print(Fraction(usr_first_fraction) * Fraction(usr_second_fraction))
 print()
 
 print("Вывод с помощью пользовательских функций")
-print(SummaryFractions(usr_first_fraction, usr_second_fraction))
-print(MultiplyFractions(usr_first_fraction, usr_second_fraction))
+print(summary_fractions(usr_first_fraction, usr_second_fraction))
+print(multiply_fractions(usr_first_fraction, usr_second_fraction))
