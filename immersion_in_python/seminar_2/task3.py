@@ -32,7 +32,7 @@ def summary_fractions(first_fraction, second_fraction) -> str:
     return f"{common_numerator}/{common_denominator}"
 
 
-def multyply_fractions(first_fraction, second_fraction) -> str:
+def multiply_fractions(first_fraction, second_fraction) -> str:
     first_fraction_list = first_fraction.split("/")
     second_fraction_list = second_fraction.split("/")
 
