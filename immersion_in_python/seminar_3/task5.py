@@ -45,16 +45,16 @@ print(uniq_for_each, end="\n\n")
 absent_things_each = {}
 
 for k, v in things_dict.items():
-    # current_friend_absent = all_things - set(v)
-    # absent_things_each[k] = current_friend_absent
-    current_friend_things = set(v)
-    temp_list = list_user_things.copy()
-    temp_list.remove(v)
-    common_for_two = set()
-    for item in temp_list:
-        common_for_two |= set(item)
-
-    absent_things_each[k] = common_for_two - current_friend_things
+    current_friend_absent = all_things - set(v)
+    absent_things_each[k] = current_friend_absent
+    # current_friend_things = set(v)
+    # temp_list = list_user_things.copy()
+    # temp_list.remove(v)
+    # common_for_two = set()
+    # for item in temp_list:
+    #     common_for_two |= set(item)
+    #
+    # absent_things_each[k] = common_for_two - current_friend_things
 
 print("Примеры отсутствующих вещей для каждого из друзей:")
 print(absent_things_each, end="\n\n")
