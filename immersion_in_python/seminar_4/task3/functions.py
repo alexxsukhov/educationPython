@@ -1,7 +1,8 @@
 from config import *
 
 
-def replenishment(remains):
+def replenishment(remains: int) -> int:
+    """Функция пополнения лицевого счета"""
     income = int(input("Введите сумму для пополнения: "))
     if income % MONEY_DIV == 0:
         remains += income
@@ -11,7 +12,8 @@ def replenishment(remains):
     return remains
 
 
-def withdrawal(remains):
+def withdrawal(remains: int) -> int:
+    """Функция снятия с лицевого счета"""
     outcome = int(input("Введите сумму для снятия: "))
 
     commission = remains * TAX_OUTCOME
@@ -29,7 +31,8 @@ def withdrawal(remains):
     return remains
 
 
-def bonus_tax(remains, count_operation):
+def bonus_tax(remains: int, count_operation: int) -> int:
+    """Функция изменения лицевого счета налог и бонус"""
     if remains >= LUXURY_LIMIT:
         remains *= TAX_LUXURY
         print('Раскулачивание')
@@ -40,7 +43,8 @@ def bonus_tax(remains, count_operation):
     return remains
 
 
-def main(remains, count_operation=0):
+def main(remains: int, count_operation: int = 0):
+    """Главная функция"""
     while True:
         remains = bonus_tax(remains, count_operation)
         choose = input(f"{MODES}")
