@@ -6,14 +6,16 @@
 
 
 def print_matrix(matrix):
+    """Вывод матрицы на экран"""
     for row in matrix:
         for col in row:
             print(col, end=" ")
         print()
 
 
-def transposition_matrix(matrix):
-    new_matrix = [[0 for j in range(len(usr_list))] for i in range(len(usr_list[0]))]
+def transposition_matrix(matrix: list[list[int]]) -> list[list[int]]:
+    """Транспонирование матрицы"""
+    new_matrix = [[0 for j in range(len(matrix))] for i in range(len(matrix[0]))]
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
             new_matrix[j][i] = matrix[i][j]
