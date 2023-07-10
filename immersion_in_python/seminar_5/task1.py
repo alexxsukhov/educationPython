@@ -12,3 +12,4 @@ def return_parse_path(path_to_file: str):
 
 
 print(return_parse_path(PATH_TO_FILE))
+
