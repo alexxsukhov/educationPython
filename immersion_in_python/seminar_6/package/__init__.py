@@ -1,1 +1,1 @@
-__all__ = ['guessing_game']
+__all__ = ["guessing_game", "mystery", "check_date"]
