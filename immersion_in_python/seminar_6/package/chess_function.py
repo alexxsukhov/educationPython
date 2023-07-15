@@ -21,14 +21,11 @@ def check_chess_queen(queen_list_coordinates: list[tuple[int, int]]) -> bool:
     check_result = True
 
     for i in range(count_iter):
-        for j in range(count_iter):
-            if i == j:
-                continue
-            elif zip_coordinate[0][i] == zip_coordinate[0][j] or zip_coordinate[1][i] == zip_coordinate[1][j] or \
+        for j in range(i + 1, count_iter):
+            if zip_coordinate[0][i] == zip_coordinate[0][j] or zip_coordinate[1][i] == zip_coordinate[1][j] or \
                     abs(zip_coordinate[0][i] - zip_coordinate[0][j]) == \
                     abs(zip_coordinate[1][i] - zip_coordinate[1][j]):
                 check_result = False
-                break
 
     return check_result
 
