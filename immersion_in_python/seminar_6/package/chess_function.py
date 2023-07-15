@@ -65,6 +65,7 @@ def print_matrix(matrix):
 
 
 def print_queens(matrix):
+    """Вывод расположения ферзей на доске (визуальное представление)"""
     for row in matrix:
         for item in row:
             if item == 1:
