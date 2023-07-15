@@ -26,6 +26,7 @@ def check_chess_queen(queen_list_coordinates: list[tuple[int, int]]) -> bool:
                     abs(zip_coordinate[0][i] - zip_coordinate[0][j]) == \
                     abs(zip_coordinate[1][i] - zip_coordinate[1][j]):
                 check_result = False
+                break
 
     return check_result
 
