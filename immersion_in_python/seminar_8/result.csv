@@ -1,0 +1,6 @@
+name,type,size,parent_directory
+main.py,file,1599,./
+test_dir,directory,23,./
+test.txt,file,23,./test_dir
+test_dir_2,directory,23,./
+test.txt,file,23,./test_dir_2
