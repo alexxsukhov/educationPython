@@ -34,17 +34,17 @@ def save_to_json(func):
     return wrapper
 
 
-def quadratic_equation(a: int | float, b: int | float, c: int | float) -> tuple[float | int, float | int]:
+def quadratic_equation(a: int | float, b: int | float, c: int | float) -> tuple[str, str]:
     """Функция нахождения корней квадратного уравнения"""
     discriminant = b ** 2 - 4 * a * c
-    x1 = (-b + discriminant ** 0.5) / (2 * a)
-    x2 = (-b - discriminant ** 0.5) / (2 * a)
+    x1 = str((-b + discriminant ** 0.5) / (2 * a))
+    x2 = str((-b - discriminant ** 0.5) / (2 * a))
 
-    return str(x1), str(x2)
+    return x1, x2
 
 
 @save_to_json
-def reading_csv_in_data(file_path: str) -> dict[str, tuple[int | float, int | float]]:
+def reading_csv_in_data(file_path: str) -> dict[str, tuple[str, str]]:
     results = {}
     with open(file_path, newline='') as csvfile:
         csv_reader = csv.reader(csvfile)
