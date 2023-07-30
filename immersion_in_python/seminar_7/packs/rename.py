@@ -3,7 +3,7 @@ import os
 __all__ = ["number_count", "file_rename"]
 
 
-def number_count(self, step=1, start=1, end=10):
+def number_count(self, step=1, start=1, end=5):
     current_number = start
 
     while current_number <= end:
@@ -14,11 +14,11 @@ def number_count(self, step=1, start=1, end=10):
 
 
 def file_rename(step=2,
-                enj='csv',
+                enj='txt',
                 enj_end='txt',
                 num_start=3,
                 num_end=6,
-                folder_path="/home/alexxs/PycharmProjects/educationPython/immersion_in_python/seminar_7"):
+                folder_path="."):
     file_list = os.listdir(folder_path)
     for file in file_list:
         lst = file.split('.')

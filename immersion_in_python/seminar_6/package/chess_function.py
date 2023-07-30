@@ -31,7 +31,7 @@ def check_chess_queen(queen_list_coordinates: list[tuple[int, int]]) -> bool:
     return check_result
 
 
-def gen_list_coordinates(count_queens: int):
+def _gen_list_coordinates(count_queens: int):
     """Генерация списка координат ферзей"""
     coordinate_list = []
 
@@ -47,7 +47,7 @@ def gen_list_coordinates(count_queens: int):
     return coordinate_list
 
 
-def gen_matrix_queens(coordinates: list[tuple[int, int]]) -> list[list[int]]:
+def _gen_matrix_queens(coordinates: list[tuple[int, int]]) -> list[list[int]]:
     """Генерация расположения ферзей в случайном порядке"""
     matrix = [[0 for _ in range(CHECKERBOARD_SIZE)] for _ in range(CHECKERBOARD_SIZE)]
 
@@ -76,7 +76,7 @@ def print_queens(matrix):
 
 
 if __name__ == '__main__':
-    list_coord = gen_list_coordinates(COUNT_QUEEN)
-    matrix_queens = gen_matrix_queens(list_coord)
+    list_coord = _gen_list_coordinates(COUNT_QUEEN)
+    matrix_queens = _gen_matrix_queens(list_coord)
     print_queens(matrix_queens)
     print(check_chess_queen(list_coord))
